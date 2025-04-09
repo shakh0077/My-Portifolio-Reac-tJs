@@ -35,7 +35,7 @@ function Home() {
             (internationalization) va responsiv dizaynni qo‘llashda yetakchi
             mutaxassis sifatida tanilgan.
           </p>
-          <div data-aos="fade-down" className="flex items-center gap-2 justify-center sm:justify-start text-amber-500">
+          <div data-aos="fade-down" className="flex items-center gap-2 py-3 justify-center sm:justify-start text-amber-500">
             <RiStarFill /><RiStarFill /><RiStarFill /><RiStarFill /><RiStarFill />
           </div>
           <img

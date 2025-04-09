@@ -19,7 +19,7 @@ function Services() {
   return (
     <div className="bg-black/90 mt-30">
           <div className="container " id="services">
-      <div className="relative">
+      <div className="relative w-[260px]  lg:w-full">
         <img src={BgImg} alt="" />
         <div className="flex gap-64 left-20 absolute top-5 text-white  justify-between">
           <h1 data-aos='fade-right' className="text-4xl font-bold">
