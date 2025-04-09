@@ -2,10 +2,11 @@
 
 html{
     scroll-behavior: smooth;
+    overflow:hidden;
 }
 
 @layer{
     .container{
-        @apply max-w-[1440px] w-full mx-auto px-10 py-5
+        @apply max-w-[1440px] w-full mx-auto  py-5
     }
 }

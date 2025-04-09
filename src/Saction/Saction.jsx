@@ -8,21 +8,22 @@ import Skills from "../components/Skills";
 import About from "../components/About";
 import Resume from "../components/Resume";
 import Contact from "../components/Contact";
+import Mui from "../Pages/Mui";
 
 function Saction() {
   return (
-    <div>
-      <nav className="flex max-w-[1440px] w-full mx-auto px-5 justify-between items-center z-10 bg-black shadow-2xl rounded-4xl text-white px-5  sticky top-5 ">
+    <div className="p-2 ">
+      <nav className="flex max-w-[1440px]  w-full mx-auto justify-between items-center z-10 bg-black shadow-2xl rounded-4xl text-white px-5  sticky top-5 ">
         <a
           href="#home"
-          className="font-semibold hover:text-orange-400 focus:bg-orange-400 focus:text-white px-5 py-2 rounded-3xl"
+          className="font-semibold hover:text-orange-400 hidden lg:block  focus:bg-orange-400 focus:text-white px-5 py-2 rounded-3xl"
         >
           Home
         </a>
-        <a href="#services" className="font-semibold hover:text-orange-400 focus:bg-orange-400 focus:text-white px-5 py-2 rounded-3xl">
+        <a href="#services" className="font-semibold hidden lg:block  hover:text-orange-400 focus:bg-orange-400 focus:text-white px-5 py-2 rounded-3xl">
           Service
         </a>
-        <a href="#about" className="font-semibold hover:text-orange-400   focus:bg-orange-400 focus:text-white px-5 py-2 rounded-3xl">
+        <a href="#about" className="font-semibold hidden lg:block  hover:text-orange-400   focus:bg-orange-400 focus:text-white px-5 py-2 rounded-3xl">
           About
         </a>
 
@@ -33,15 +34,19 @@ function Saction() {
             <span className="text-orange-400 font-bold text-xl">Sh</span>akh
           </h2>
         </a>
-        <a href="#resume" className="font-semibold focus:bg-orange-400 focus:text-white px-5 py-2 rounded-3xl">
+        <a href="#resume" className="font-semibold hidden lg:block  focus:bg-orange-400 focus:text-white px-5 py-2 rounded-3xl">
           Resume
         </a>
-        <a href="#skills" className="font-semibold hover:text-orange-400 focus:bg-orange-400 focus:text-white px-5 py-2 rounded-3xl">
+        <a href="#skills" className="font-semibold hidden lg:block  hover:text-orange-400 focus:bg-orange-400 focus:text-white px-5 py-2 rounded-3xl">
           Skills
         </a>
-        <a href="#contact" className="font-semibold  hover:text-orange-400  focus:bg-orange-400 focus:text-white px-5 py-2 rounded-3xl">
+        <a href="#contact"  className="font-semibold hidden lg:block  hover:text-orange-400  focus:bg-orange-400 focus:text-white px-5 py-2 rounded-3xl">
           Contact
         </a>
+
+       <div className="block lg:hidden">
+       <Mui />
+       </div>
       </nav>
 
       <Home />

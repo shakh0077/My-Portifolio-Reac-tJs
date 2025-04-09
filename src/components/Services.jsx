@@ -17,15 +17,15 @@ function Services() {
       });
     }, []);
   return (
-    <div className="bg-black/90">
-          <div className="container my-10" id="services">
+    <div className="bg-black/90 mt-30">
+          <div className="container " id="services">
       <div className="relative">
         <img src={BgImg} alt="" />
         <div className="flex gap-64 left-20 absolute top-5 text-white  justify-between">
           <h1 data-aos='fade-right' className="text-4xl font-bold">
-            My <span className="text-orange-400 ">Services</span>
+            My <br className="block lg:hidden" /> <span className="text-orange-400 ">Services</span>
           </h1>
-          <h3  data-aos='fade-left' className="max-w-[700px]">
+          <h3  data-aos='fade-left' className="hidden max-w-[700px] lg:block">
             Men keng qamrovli veb-ishlab chiqish xizmatlarini taklif etaman,
             jumladan responsiv dizayn, React bilan front-end ishlab chiqish va
             maxsus UI/UX yechimlari. Agar siz dinamik veb-sayt yaratmoqchi
@@ -35,11 +35,11 @@ function Services() {
             bera olaman. Keling, birgalikda ajoyib bir narsa yaratamiz!
           </h3>
         </div>
-        <div  data-aos='fade-down' className="absolute top-30 left-50">
+        <div  data-aos='fade-down' className="absolute top-40 left-60">
           <img src={ServicesImg} width={800} alt="serviseImg" />
         </div>
 
-        <div className="absolute bottom-20 text-white left-2/5 flex  gap-5 text-3xl">
+        <div className="absolute bottom-0 lg:bottom-20 text-white left-1/3 lg:left-2/5 flex  gap-5 text-1xl lg:text-3xl ">
           <a  data-aos='fade-right' className="hover:text-amber-500 hover:scale-125 transition-transform duration-500 ease-in-out" href="shalh_077_01"><FaTelegram /></a>
           <a  data-aos='fade-right' className="hover:text-amber-500 hover:scale-125 transition-transform duration-500 ease-in-out" href="902640680"><MdAddIcCall /></a>
           <a  data-aos='fade-left' className="hover:text-amber-500 hover:scale-125 transition-transform duration-500 ease-in-out" href="https://www.instagram.com/"><GrInstagram /></a>
