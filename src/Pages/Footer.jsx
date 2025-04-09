@@ -9,8 +9,8 @@ import toast from "react-hot-toast";
 function Footer() {
   const [email, setEmail] = useState("");
 
-  const BOT_TOKEN = '7330849668:AAH6-V7mMPu9Rha2infXYwBQ7zbVDRRbHe0'; // 🔒 Telegram bot token
-  const CHAT_ID = '7426153375';     // 🔒 Chat ID (foydalanuvchi yoki kanal)
+  const BOT_TOKEN = '7330849668:AAH6-V7mMPu9Rha2infXYwBQ7zbVDRRbHe0'; 
+  const CHAT_ID = '7426153375';    
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -55,7 +55,7 @@ function Footer() {
     <div className="bg-black">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          <h1 className="text-3xl font-semibold text-white">Let's Connect There</h1>
+          <h1 className="text-3xl font-semibold text-white">Keling, u yerda bog‘lanamiz</h1>
           <button className="bg-orange-400 cursor-pointer px-10 py-1.5 text-xl text-white rounded-4xl">
             <a className="flex gap-1.5 items-center" href="#home">Hire Me <MdEast /></a>
           </button>
@@ -123,7 +123,7 @@ function Footer() {
               />
               <button
                 type="submit"
-                className="bg-orange-400 px-4 absolute top-1.5 right-2 rounded-4xl py-1.5 text-white"
+                className="bg-orange-400 px-4 cursor-pointer absolute top-1.5 right-2 rounded-4xl py-1.5 text-white"
               >
                 Submit
               </button>

@@ -18,14 +18,20 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const text = `📩 Yangi xabar!\n\n👤 Ism: ${formData.name}\n📧 Email: ${formData.email}\n📝 Xabar: ${formData.message}`;
+    const { name, email, message } = formData;
+
+    // 👇 Inputlar bo‘sh bo‘lsa xatolik beriladi
+    if (!name || !email || !message) {
+      toast.error("Iltimos, barcha maydonlarni to‘ldiring!");
+      return;
+    }
+
+    const text = `📩 Yangi xabar!\n\n👤 Ism: ${name}\n📧 Email: ${email}\n📝 Xabar: ${message}`;
 
     try {
       const res = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           chat_id: CHAT_ID,
           text: text
@@ -33,19 +39,20 @@ const Contact = () => {
       });
 
       if (res.ok) {
-        toast.success("Xabaringiz muvaffaqiyatli yuborildi!");
+        toast.success("✅ Xabaringiz muvaffaqiyatli yuborildi!");
         setFormData({ name: '', email: '', message: '' });
       } else {
-        toast.error("Xabar yuborishda xatolik yuz berdi.");
+        toast.error("❌ Xabar yuborilmadi, qaytadan urinib ko‘ring.");
       }
-    } catch (err) {
-      toast.error("Server bilan bog‘lanib bo‘lmadi.");
+    } catch (error) {
+      toast.error("❌ Serverga ulanishda xatolik yuz berdi.");
     }
   };
 
   return (
     <div className="flex items-center justify-center px-4 py-10" id='contact'>
       <div className="bg-white rounded-4xl shadow-2xl max-w-5xl w-full grid md:grid-cols-2">
+        {/* Chap taraf - kontakt info */}
         <div className="bg-orange-400 text-white rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none p-8 flex flex-col justify-center">
           <h2 className="text-3xl font-bold mb-4">Aloqa ma'lumotlari</h2>
           <p className="mb-6 text-gray-100">Men bilan bog‘lanish uchun quyidagi ma’lumotlardan foydalaning:</p>
@@ -61,6 +68,7 @@ const Contact = () => {
           </div>
         </div>
 
+        {/* O'ng taraf - forma */}
         <div className="p-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">Bizga xabar qoldiring</h2>
           <form className="space-y-4" onSubmit={handleSubmit}>
