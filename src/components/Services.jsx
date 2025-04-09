@@ -19,7 +19,7 @@ function Services() {
   return (
     <div className="bg-black/90 mt-30">
           <div className="container " id="services">
-      <div className="relative w-[260px]  lg:w-full">
+      <div className="relative">
         <img src={BgImg} alt="" />
         <div className="flex gap-64 left-20 absolute top-5 text-white  justify-between">
           <h1 data-aos='fade-right' className="text-4xl font-bold">
@@ -35,8 +35,8 @@ function Services() {
             bera olaman. Keling, birgalikda ajoyib bir narsa yaratamiz!
           </h3>
         </div>
-        <div  data-aos='fade-down' className="absolute top-40 left-60">
-          <img src={ServicesImg} width={800} alt="serviseImg" />
+        <div  data-aos='fade-down' className="absolute top-40 right-10 lg:left-60">
+          <img src={ServicesImg} className="w-[200px] lg:w-[800px] " alt="serviseImg" />
         </div>
 
         <div className="absolute bottom-0 lg:bottom-20 text-white left-1/3 lg:left-2/5 flex  gap-5 text-1xl lg:text-3xl ">

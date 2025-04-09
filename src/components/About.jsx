@@ -24,7 +24,7 @@ function About() {
         </h3>
       </div>
 
-      <div className='flex flex-col sm:flex-row my-8 shadow-2xl hover:scale-110 transition-transform duration-500 ease-in-out border-4 rounded-4xl w-full sm:w-[800px] mx-auto'>
+      <div className='flex flex-col sm:flex-row my-8 shadow-2xl hover:scale-110 transition-transform duration-500 ease-in-out border-4 rounded-4xl sm:w-[800px] mx-auto'>
         <div data-aos='fade-right' className='w-full sm:w-[400px] sm:border-r-2 text-center my-10'>
           <h2 className='text-orange-500 font-bold text-2xl'>Javascript Software Engineer</h2>
           <h3 className='text-black font-semibold text-1xl'>Tools:</h3>
