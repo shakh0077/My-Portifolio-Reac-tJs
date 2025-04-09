@@ -1,7 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 const Contact = () => {
+      useEffect(() => {
+        AOS.init({
+          duration: 1000, 
+          easing: 'ease-in-out',
+          once: true, 
+        });
+      }, []);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -50,7 +59,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex items-center justify-center px-4 py-10" id='contact'>
+    <div  data-aos ='zoom-in' className="flex items-center justify-center px-4 py-10" id='contact'>
       <div className="bg-white rounded-4xl shadow-2xl max-w-5xl w-full grid md:grid-cols-2">
         {/* Chap taraf - kontakt info */}
         <div className="bg-orange-400 text-white rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none p-8 flex flex-col justify-center">

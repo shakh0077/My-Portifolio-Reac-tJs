@@ -4,14 +4,23 @@ import Bootstrap from "../assets/Boostrap.svg";
 import CssImg from "../assets/Css.svg";
 import JsImg from "../assets/Js.svg";
 import GitImg from "../assets/git.svg";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
-import React from "react";
+import React, { useEffect } from "react";
 
 function Skills() {
+            useEffect(() => {
+              AOS.init({
+                duration: 1000, 
+                easing: 'ease-in-out',
+                once: true, 
+              });
+            }, []);
   return (
     <div id="skills" className=" pt-20">
       <div className="container">
-        <div>
+        <div data-aos='fade-down'>
           <h2 className="text-4xl font-bold text-center text-black">
             My <span className="text-orange-400">Skills</span>
           </h2>
@@ -20,7 +29,7 @@ function Skills() {
             frontend architecture.
           </h3>
         </div>
-        <div className="flex gap-10 my-10 w-[900px] mx-auto ">
+        <div data-aos='zoom-in' className="flex gap-10 my-10 w-[900px] mx-auto ">
           <div className="text-center">
             <div className=" p-2 rounded-3xl">
               <img src={ReactImg} alt="imgages" />

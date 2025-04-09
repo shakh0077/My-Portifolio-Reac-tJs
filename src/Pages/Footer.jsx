@@ -1,12 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MdAddIcCall, MdEast } from "react-icons/md";
 import Logo from "../assets/logo.svg";
 import { FaFacebookSquare, FaGithub, FaTwitter } from "react-icons/fa";
 import { SiInstagram } from "react-icons/si";
 import { BsTelegram } from "react-icons/bs";
 import toast from "react-hot-toast";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 function Footer() {
+        useEffect(() => {
+          AOS.init({
+            duration: 1000, 
+            easing: 'ease-in-out',
+            once: true, 
+          });
+        }, []);
   const [email, setEmail] = useState("");
 
   const BOT_TOKEN = '7330849668:AAH6-V7mMPu9Rha2infXYwBQ7zbVDRRbHe0'; 
@@ -53,7 +62,7 @@ function Footer() {
 
   return (
     <div className="bg-black">
-      <div className="container mx-auto px-4">
+      <div  data-aos='fade-down' className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <h1 className="text-3xl font-semibold text-white">Keling, u yerda bog‘lanamiz</h1>
           <button className="bg-orange-400 cursor-pointer px-10 py-1.5 text-xl text-white rounded-4xl">
