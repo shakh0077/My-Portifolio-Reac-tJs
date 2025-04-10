@@ -51,8 +51,8 @@ function Saction() {
 
       <Home />
       <Services />
-      <About/>
-      {/* <Resume/> */}
+      {/* <About/> */}
+      <Resume/>
       {/* <Skills/> */}
       {/* <Contact/> */}
       {/* <Footer /> */}
