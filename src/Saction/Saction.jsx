@@ -50,12 +50,12 @@ function Saction() {
       </nav>
 
       <Home />
-      <Services />
-      <About/>
-      <Resume/>
-      <Skills/>
-      <Contact/>
-      <Footer />
+      {/* <Services /> */}
+      {/* <About/> */}
+      {/* <Resume/> */}
+      {/* <Skills/> */}
+      {/* <Contact/> */}
+      {/* <Footer /> */}
     </div>
   );
 }

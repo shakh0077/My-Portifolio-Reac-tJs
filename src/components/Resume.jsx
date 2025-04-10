@@ -13,7 +13,7 @@ const Resume = () => {
 
   return (
     <div className="bg-gray-200" id="resume">
-      <div className="container px-4 sm:px-6 md:px-10 lg:px-20">
+      <div className="container px-4 sm:px-3 md:px-10 lg:px-70">
         <div data-aos="fade-down" className="text-center py-5">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold underline">Resume</h2>
         </div>
