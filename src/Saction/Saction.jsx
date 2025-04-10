@@ -49,13 +49,13 @@ function Saction() {
        </div>
       </nav>
 
-      {/* <Home /> */}
-      {/* <Services /> */}
+      <Home />
+      <Services />
       <About/>
-      {/* <Resume/> */}
-      {/* <Skills/> */}
-      {/* <Contact/> */}
-      {/* <Footer /> */}
+      <Resume/>
+      <Skills/>
+      <Contact/>
+      <Footer />
     </div>
   );
 }
